@@ -46,7 +46,7 @@ router.get('/', function(req, res) {
           country: country,
           genre: genre
         });
-        
+
       }).on('error', function (e) {
         console.log("Got error: " + e.message);
       });
