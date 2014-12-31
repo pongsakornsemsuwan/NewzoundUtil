@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        function decodeHtml(html) {
+            var txt = document.createElement("textarea");
+            txt.innerHTML = html;
+            return txt.value;
+        }
+    </script>
+</head>
+<body>
+<form method="get" action="/">
+url : <input type="text" name="url"/><br/><br/>
+<!--name : <input type="text" name="name"/><br/><br/>-->
+<!--release : <input type="text" name="releaseDate"/><br/><br/>-->
+<input type="submit">
+</form>
+
+<div id="result">
+<script type="text/javascript">
+    document.write( decodeHtml('<%=title%>' + '<br/><br/>') );
+</script>
+<%=result%><br/><br/>
+&lt;strong&gt;Artist&lt;/strong&gt; : <%=artist%><br/><br/>
+&lt;strong&gt;Country&lt/strong&gt; : <%=country%><br/><br/>
+&lt;strong&gt;Genre&lt;/strong&gt; : <%=genre%><br/><br/>
+&lt;strong&gt;Release Date&lt;/strong&gt; : <%=releaseDate%><br/><br/>
+</div>
+</body>
+</html>
